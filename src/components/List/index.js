@@ -1,13 +1,18 @@
 import React from 'react';
+import ListItem from '../ListItem/index.js'
 
 const List = () => {
+
+  const data = [
+    'Пройти курс react',
+    'Написать компонент ToDo',
+    'Сдать задание',
+    'Радоваться жизни'
+  ]
+
   return (
-    <ul>
-      <li>Пройти курс react</li>
-      <li>Написать компонент ToDo</li>
-      <li>Сдать задание</li>
-      <li>Радоваться жизни</li>
-    </ul>
+   data.map((item) => <ListItem>{item}</ListItem>
+   )
   )
 }
 
