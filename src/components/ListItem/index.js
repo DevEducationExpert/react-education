@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const ListItem = ({children}) => {
+  const [done, setDone] = useState(false);
+
   return (
-    <li>{children}</li>
+    <li style={{
+      textDecoration: done ? "line-through" : 'unset'
+    }}
+    
+    onClick={() => {
+      setDone(!done)
+    }}>{children}</li>
   )
 }
 
